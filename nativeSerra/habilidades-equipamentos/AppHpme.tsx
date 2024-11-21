@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Image,
   ScrollView,
+  TouchableOpacity,
 } from "react-native";
 import { styles } from "./styles";
 import { JogosPromocao } from "./src/components/cardPromo/JogosPromocao";
@@ -15,7 +16,10 @@ import { Footer } from "./src/components/footer/Footer";
 
 export default function AppHpme() {
   return (
-    <LinearGradient colors={["#1c3f5b", "#1a3956", "#223f5f"]} style={styles.container}>
+    <LinearGradient
+      colors={["#1c3f5b", "#1a3956", "#223f5f"]}
+      style={styles.container}
+    >
       <View style={styles.headerSkill}>
         <TextInput
           style={styles.input}
@@ -35,12 +39,12 @@ export default function AppHpme() {
           style={styles.tresPontinhos}
         />
         <Image source={require("./assets/img/lupa.png")} style={styles.lupa} />
-        <View style={styles.textDiv}>
+        <TouchableOpacity style={styles.textDiv}>
           <Text style={styles.textHead}>
-            MENU           LISTA DE DESEJOS           CARTEIRA
+            MENU LISTA DE DESEJOS CARTEIRA
             <Text style={styles.spanCarteira}>(R$ 0,00)</Text>
           </Text>
-        </View>
+        </TouchableOpacity>
       </View>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <Text style={styles.textDestaque}>DESTAQUES E RECOMENDADOS</Text>
@@ -99,7 +103,10 @@ export default function AppHpme() {
             ></JogosPromocao>
           </ScrollView>
         </View>
-        <LinearGradient colors={["#1a2e46", "#1a2b44", "#182734"]} style={styles.containerSecundario}>
+        <LinearGradient
+          colors={["#1a2e46", "#1a2b44", "#182734"]}
+          style={styles.containerSecundario}
+        >
           <View style={styles.jogoSecundario}>
             <Text style={styles.textJogoSecundaria}>OFERTAS ESPECIAIS</Text>
             <Text style={styles.textMais}>Mais</Text>
